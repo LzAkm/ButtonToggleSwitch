@@ -1,7 +1,7 @@
 import './ToggleSwitch.css';
 import React, { useState } from 'react';
 
-function ToggleSwicth({ defaultValue = false, onValueChange }) {
+function ToggleSwicth({ defaultValue = false, onValueChange, rounded = false }) {
     const [isToggled, setIsToggled] = useState(defaultValue);
 
     const toggleSwitch = () => {
@@ -12,7 +12,7 @@ function ToggleSwicth({ defaultValue = false, onValueChange }) {
 
     return (
         <div>
-            <label className="switch">
+            <label className={`switch ${rounded ? 'rounded' : ''}`}>
                 <input type="checkbox" onChange={toggleSwitch} checked={isToggled}/>
                 <span className="slider"></span>
             </label>

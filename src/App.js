@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <h1>Toggle Switch Button</h1>
-      <ToggleSwicth defaultValue={false} onValueChange={handleToggleChange}/>
+      <ToggleSwicth defaultValue={false} onValueChange={handleToggleChange} rounded={false}/>
     </div>
   );
 }
