@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <h1>Toggle Switch Button</h1>
-      <ToggleSwicth/>
+      <ToggleSwicth defaultValue={false}/>
     </div>
   );
 }
