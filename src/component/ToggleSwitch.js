@@ -1,11 +1,13 @@
 import './ToggleSwitch.css';
 import React, { useState } from 'react';
 
-function ToggleSwicth({ defaultValue = false }) {
+function ToggleSwicth({ defaultValue = false, onValueChange }) {
     const [isToggled, setIsToggled] = useState(defaultValue);
 
     const toggleSwitch = () => {
-        setIsToggled(!isToggled);
+        const newValue = !isToggled;
+        setIsToggled(newValue);
+        onValueChange(newValue)
     };
 
     return (
